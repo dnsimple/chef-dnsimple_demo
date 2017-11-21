@@ -1,0 +1,27 @@
+---
+driver:
+  name: dokken
+  chef_version: latest
+
+transport:
+  name: dokken
+
+provisioner:
+  name: dokken
+
+verifier:
+  name: inspec
+
+platforms:
+- name: ubuntu-14.04
+  driver:
+    image: dokken/ubuntu-14.04
+
+suites:
+  - name: default
+    run_list:
+      - recipe[dnsimple_demo]
+    attributes:
+      dnsimple:
+        access_token: <%= ENV['DNSIMPLE_ACCESS_TOKEN'] %>
+        demo_id: <%= ENV['DNSIMPLE_DEMO_ID'] %>
