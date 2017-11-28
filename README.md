@@ -1,4 +1,4 @@
-# ChefConf 2017 Demo
+# DNSimple cookbook demo
 
 This is our "booth" demo which stands up a Digital Ocean instance, installs nginx and a demo page then pings the dnsimple API to update the IP address of a domain with the instance IP.
 
