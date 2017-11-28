@@ -13,8 +13,10 @@ verifier:
   name: inspec
 
 platforms:
-  - name: ubuntu-14.04
+  - name: ubuntu-14
     attributes:
+      apt:
+        compile_time_update: true
       openssh:
         server:
           permit_root_login: without-password

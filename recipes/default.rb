@@ -19,7 +19,7 @@ httpd_config 'default' do
 end
 
 file '/var/www/index.html' do
-  content "<html><body><h1>Domain Management Automated with Chef&trade;</h1></ br><h2>Welcome to out webinar #{node['dnsimple']['demo_id'].capitalize}</h2></body></html>"
+  content "<html><body><h1>Domain Management Automated with Chef&trade;</h1></ br><h2>Welcome to our webinar #{node['dnsimple']['demo_id'].capitalize}</h2></body></html>"
   owner 'www-data'
   group 'www-data'
   mode '644'
